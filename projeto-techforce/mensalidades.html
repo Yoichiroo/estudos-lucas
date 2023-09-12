@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento de Mensalidade</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-empresa">
+            <figure><a href="index.html"><img src="img/logo.png" alt=""></a></figure>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="avaliacoes.html">Avaliações</a></li>
+                <li><a href="mensalidades.html">Mensalidades</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="mainCad">
+        <form action="" method="get" name="form_mensalidade" class="form_cadastro" onsubmit="return calcular()">
+            <h1>Pagamento de Mensalidade</h1>
+            <div>
+                <label for="nomeAluno">Nome do Aluno</label>
+                <input type="text" name="nomeAluno" id="nomeAluno">
+            </div>
+            <div>
+                <label for="mesPagamento">Mês do Pagamento</label>
+                <select name="mesPagamento" id="mesPagamento">
+                    <option value="janeiro">Janeiro</option>
+                    <option value="fevereiro">Fevereiro</option>
+                    <option value="marco">Março</option>
+                    <option value="abril">Abril</option>
+                    <option value="maio">Maio</option>
+                    <option value="junho">Junho</option>
+                    <option value="julho">Julho</option>
+                    <option value="agosto">Agosto</option>
+                    <option value="setembro">Setembro</option>
+                    <option value="outubro">Outubro</option>
+                    <option value="novembro">Novembro</option>
+                    <option value="dezembro">Dezembro</option>
+                </select>
+            </div>
+            <div>
+                <label for="dia_pagamento">Dia do pagamento</label>
+                <input type="number" name="dia_pagamento" id="dia_pagamento" min="1" max="31">
+            </div>
+            <div>
+                <label for="valor_mensalidade">Valor da Mensalidade R$</label>
+                <input type="number" name="valor_mensalidade" id="valor_mensalidade" step="0.01" value=135.00 readonly>
+            </div>
+            <div>
+                <button class="enviar" type="submit">Calcular valor</button>
+            </div>
+            <div>
+                <p>Valor de desconto: <output id="res_desconto">R$</output></p>
+                <p>Valor a pagar: <output id="res_final">R$</output></p>
+            </div>
+        </form>
+    </main>
+    <script src="js/script.js"></script>
+    <footer>
+        <section class="content-flex">
+            <div class="logo-empresa">
+                <figure><a href=""><img src="img/logo.png" alt="Techforce logo"></a></figure>
+            </div>
+            <div class="div-suportes">
+                <div class="div-suporte">
+                    <h3>EMPRESA</h3>
+                    <ul>
+                        <li>Sobre Nós</li>
+                        <li>Endereço</li>
+                        <li>Contato</li>
+                    </ul>
+                </div>
+                <div class="div-suporte">
+                    <h3>LINKS ÚTEIS</h3>
+                    <ul>
+                        <li>Suporte</li>
+                        <li>Aplicativo mobile gratuito</li>
+                        <li>Termos e Condições de Uso</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="redes-sociais">
+                <div class="rede-social">
+                    <figure><a href=""><img src="img/facebook-logo.webp" alt=""></a></figure>
+                </div>
+                <div class="rede-social">
+                    <figure><a href=""><img src="img/instagram-logo.webp" alt=""></a></figure>
+                </div>
+                <div class="rede-social">
+                    <figure><a href=""><img src="img/twitter-logo.webp" alt=""></a></figure>
+                </div>
+                <div class="rede-social">
+                    <figure><a href=""><img src="img/whatsapp-logo.webp" alt=""></a></figure>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

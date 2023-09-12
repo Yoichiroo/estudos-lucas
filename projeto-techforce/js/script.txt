@@ -1,0 +1,73 @@
+function calcular() {
+    let dia_pagamento = form_mensalidade.dia_pagamento.value
+    let valor_mensalidade = form_mensalidade.valor_mensalidade.value
+
+    let desconto
+    let valor_pagamento
+    
+    if (dia_pagamento == "" || valor_mensalidade == "") {
+        alert("Preencha todos os campos!")
+    } else {
+        if (dia_pagamento <= 5) {
+            desconto = (Number(valor_mensalidade) * 10) / 100
+            valor_pagamento = Number(valor_mensalidade) - desconto
+    
+            console.log(valor_mensalidade)
+            console.log(dia_pagamento)
+    
+            document.querySelector("#res_desconto").innerHTML = `<strong>${desconto.toFixed(2)}%</strong>`
+            document.querySelector("#res_final").innerHTML = `<strong>${valor_pagamento.toFixed(2)}</strong>`
+        } else if (dia_pagamento <= 10) {
+            desconto = (Number(valor_mensalidade) * 5) / 100
+            valor_pagamento = Number(valor_mensalidade) - desconto
+    
+            console.log(valor_mensalidade)
+            console.log(dia_pagamento)
+    
+            document.querySelector("#res_desconto").innerHTML = `<strong>${desconto.toFixed(2)}%</strong>`
+            document.querySelector("#res_final").innerHTML = `<strong>${valor_pagamento.toFixed(2)}</strong>`
+        } else {
+            desconto = "Pagamento Integral"
+            valor_pagamento = Number(valor_mensalidade)
+    
+            console.log(valor_mensalidade)
+            console.log(dia_pagamento)
+    
+            document.querySelector("#res_desconto").innerHTML = `<strong>${desconto}</strong>`
+            document.querySelector("#res_final").innerHTML = `<strong>${valor_pagamento.toFixed(2)}</strong>`
+        }
+    }
+
+    return false
+}
+
+function calcular_imc() {
+    let altura = form_imc.altura_usuario.value
+    let peso = form_imc.peso_usuario.value
+    let imc =  Number(peso) / (Number(altura) * Number(altura))
+    
+    if (peso != "" || altura != "") {
+        if (imc < 18.5) {
+            res_IMC.innerHTML = `<strong>${imc.toFixed(2)}</strong>`
+            res_grau_imc.innerHTML = `<strong>Abaixo do peso normal</strong>`
+        } else if (imc > 18.5 && imc < 24.9) {
+            res_IMC.innerHTML = `<strong>${imc.toFixed(2)}</strong>`
+            res_grau_imc.innerHTML = `<strong>Peso normal</strong>`
+        } else if (imc >= 25 && imc < 29.9) {
+            res_IMC.innerHTML = `<strong>${imc.toFixed(2)}</strong>`
+            res_grau_imc.innerHTML = `<strong>Excesso de peso</strong>`
+        } else if (imc >= 30 && imc < 34.9) {
+            res_IMC.innerHTML = `<strong>${imc.toFixed(2)}</strong>`
+            res_grau_imc.innerHTML = `<strong>Obesidade clase I</strong>`
+        } else if (imc >= 35 && imc < 39.9) {
+            res_IMC.innerHTML = `<strong>${imc.toFixed(2)}</strong>`
+            res_grau_imc.innerHTML = `<strong>Obesidade clase II</strong>`
+        } else if (imc >= 40) {
+            res_IMC.innerHTML = `<strong>${imc.toFixed(2)}</strong>`
+            res_grau_imc.innerHTML = `<strong>Obesidade clase III (mórbida)</strong>`
+        }
+    } else {
+        alert("Preencha todos os campos!")
+    }
+    return false
+}

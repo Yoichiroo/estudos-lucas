@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-empresa">
+            <figure><a href="index.html"><img src="img/logo.png" alt=""></a></figure>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="avaliacoes.html">Avaliações</a></li>
+                <li><a href="mensalidades.html">Mensalidades</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="mainCad">
+        <form action="#" class="form_cadastro" onsubmit="return calcular_imc()" name="form_imc">
+            <h1>Avaliação do Usuário</h1>
+            <div class="input_peso_altura">
+                <div class="imc_text">
+                    <p>O cálculo de IMC: peso / altura²</p>
+                </div>
+
+                <label for="altura_usuario">Altura</label>
+                <input type="number" name="altura_usuario" id="altura_usuario" placeholder="Digite sua altura..." step="0.01">
+                <label for="peso_usuario">Peso</label>
+                <input type="number" name="peso_usuario" id="peso_usuario" placeholder="Digite seu peso..." step="0.01">
+                <button type="submit" class="enviar">Calcular</button>
+            <figure class="tabela_imc">
+                <img src="img/tabela_imc.jpg" alt="Tabela IMC">
+            </figure>
+            <div>
+                <p>Seu IMC é de: <output id="res_IMC"></output></p>
+                <p>O grau do seu IMC é: <output id="res_grau_imc"></output></p>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <section class="content-flex">
+            <div class="logo-empresa">
+                <figure><a href=""><img src="img/logo.png" alt="Techforce logo"></a></figure>
+            </div>
+            <div class="div-suportes">
+                <div class="div-suporte">
+                    <h3>EMPRESA</h3>
+                    <ul>
+                        <li>Sobre Nós</li>
+                        <li>Endereço</li>
+                        <li>Contato</li>
+                    </ul>
+                </div>
+                <div class="div-suporte">
+                    <h3>LINKS ÚTEIS</h3>
+                    <ul>
+                        <li>Suporte</li>
+                        <li>Aplicativo mobile gratuito</li>
+                        <li>Termos e Condições de Uso</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="redes-sociais">
+                <div class="rede-social">
+                    <figure><a href=""><img src="img/facebook-logo.webp" alt=""></a></figure>
+                </div>
+                <div class="rede-social">
+                    <figure><a href=""><img src="img/instagram-logo.webp" alt=""></a></figure>
+                </div>
+                <div class="rede-social">
+                    <figure><a href=""><img src="img/twitter-logo.webp" alt=""></a></figure>
+                </div>
+                <div class="rede-social">
+                    <figure><a href=""><img src="img/whatsapp-logo.webp" alt=""></a></figure>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+<script src="js/script.js"></script>
+</html>
